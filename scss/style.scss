@@ -1,0 +1,109 @@
+@use 'global';
+        
+.bold {
+    font-weight: 800;
+}
+
+#article-card {
+    display: block;
+    width: 384px;
+    padding: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--black);
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    border-radius: 20px;
+    box-shadow: 16px 16px 0 0 var(--black);
+
+    &:hover > h1 {
+        color: var(--yellow);
+        cursor: pointer;
+        transition: all .1s ease-in-out;
+    }
+
+    #article-figure {
+        padding: 0;
+        margin: 0;
+
+        .article-image {
+            width: 336px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .article-metadata {
+            margin-top: 24px;
+        }
+        
+        .article-category {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-size: clamp(0.75rem, 0.6853448275862069rem + 0.27586206896551724vw, 0.875rem);
+            padding: 5px 14px;
+            background-color: var(--yellow);
+            border-radius: 4px;
+
+            &:hover {
+                box-shadow: 3px 3px 0 0 var(--black);    
+                transition: all .1s ease-in-out;
+            }
+
+        }
+        
+        .article-details {
+            font-size: 0.75rem;
+            font-size: clamp(0.75rem, 0.6853448275862069rem + 0.27586206896551724vw, 0.875rem);
+            margin-top: 12px;
+        }
+    }
+
+    .article-heading {
+        font-size: 1.25rem;
+        font-size: clamp(1.25rem, 1.1206896551724137rem + 0.5517241379310345vw, 1.5rem);
+        font-weight: 800;
+        margin-top: 12px;
+    }
+    
+    .article-text {
+        font-size: 0.875rem;
+        font-size: clamp(0.875rem, 0.8103448275862069rem + 0.27586206896551724vw, 1rem);
+        margin-top: 12px;
+        color: var(--grey);
+    }
+    
+    #article-footer {
+        margin-top: 24px;
+
+        .article-author {
+            font-size: 0.75rem;
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .article-author > span {
+            font-weight: 800;
+            margin: 8px 0 0 10px;
+        }
+        
+        .article-profile-img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #article-card {
+        width: 327px;
+        box-shadow: 8px 8px 0 0 var(--black);
+    }
+    
+    .article-image {
+        width: 279px;
+    }
+}

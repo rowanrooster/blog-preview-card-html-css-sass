@@ -1,0 +1,144 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Figtree", Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: var(--yellow);
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 50%);
+  --black: hsl(0, 0%, 7%);
+}
+
+/* figtree-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../assets/fonts/figtree-v5-latin-500.woff2") format("woff2"), url("../../assets/fonts/static/Figtree-SemiBold.ttf") format("truetype");
+}
+/* figtree-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../../assets/fonts/figtree-v5-latin-800.woff2") format("woff2"), url("../../assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype");
+}
+.bold {
+  font-weight: 800;
+}
+
+#article-card {
+  display: block;
+  width: 384px;
+  padding: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--black);
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  border-radius: 20px;
+  box-shadow: 16px 16px 0 0 var(--black);
+}
+#article-card:hover > h1 {
+  color: var(--yellow);
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+#article-card #article-figure {
+  padding: 0;
+  margin: 0;
+}
+#article-card #article-figure .article-image {
+  width: 336px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+#article-card #article-figure .article-metadata {
+  margin-top: 24px;
+}
+#article-card #article-figure .article-category {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 0.6853448276rem + 0.275862069vw, 0.875rem);
+  padding: 5px 14px;
+  background-color: var(--yellow);
+  border-radius: 4px;
+}
+#article-card #article-figure .article-category:hover {
+  box-shadow: 3px 3px 0 0 var(--black);
+  transition: all 0.1s ease-in-out;
+}
+#article-card #article-figure .article-details {
+  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 0.6853448276rem + 0.275862069vw, 0.875rem);
+  margin-top: 12px;
+}
+#article-card .article-heading {
+  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 1.1206896552rem + 0.5517241379vw, 1.5rem);
+  font-weight: 800;
+  margin-top: 12px;
+}
+#article-card .article-text {
+  font-size: 0.875rem;
+  font-size: clamp(0.875rem, 0.8103448276rem + 0.275862069vw, 1rem);
+  margin-top: 12px;
+  color: var(--grey);
+}
+#article-card #article-footer {
+  margin-top: 24px;
+}
+#article-card #article-footer .article-author {
+  font-size: 0.75rem;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+}
+#article-card #article-footer .article-author > span {
+  font-weight: 800;
+  margin: 8px 0 0 10px;
+}
+#article-card #article-footer .article-profile-img {
+  width: 32px;
+  height: 32px;
+}
+
+@media screen and (max-width: 400px) {
+  #article-card {
+    width: 327px;
+    box-shadow: 8px 8px 0 0 var(--black);
+  }
+  .article-image {
+    width: 279px;
+  }
+}/*# sourceMappingURL=style.css.map */
