@@ -98,6 +98,9 @@ img {
   box-shadow: 3px 3px 0 0 var(--black);
   transition: all 0.1s ease-in-out;
 }
+#article-card #article-figure .article-category:focus {
+  color: var(--black);
+}
 #article-card #article-figure .article-details {
   font-size: 0.75rem;
   font-size: clamp(0.75rem, 0.6853448276rem + 0.275862069vw, 0.875rem);
@@ -123,6 +126,9 @@ img {
   width: 50%;
   display: flex;
   flex-direction: row;
+}
+#article-card #article-footer .article-author:focus {
+  color: var(--black);
 }
 #article-card #article-footer .article-author > span {
   font-weight: 800;
